@@ -1,0 +1,33 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+# Alejandra Rivera Valenzuela NC 0200
+# 1. Leer el archivo CSV comida pais india
+df_food_india = pd.read_csv('indian_food.csv')
+print("\n--- DATOS LEÍDOS DESDE CSV ,comida india 0200 ---")
+print(df_food_india)
+print("\n--- Mostrar Nombre comida + ingredientes 0200---")
+recetas = df_food_india[['name', 'ingredients']]
+print(recetas)
+print("\n--- tiempo de cocinado mostrar 10 registros con head 0200 ---")
+nombre_y_hora = df_food_india[['name', 'cook_time']].head(10)
+print(nombre_y_hora)
+print("\n--- grafica comida (x) tiempo de cocinado (y)---")
+print("\n--- grafica comida (x) texto a 10 gradps---")
+nombre_y_hora.plot.bar(x='name',y='cook_time', rot=30)
+plt.title('comida tipica de india Alejandra Rivera Valenzuela NC 0200')
+plt.xlabel('nombre del platillo')
+plt.ylabel('tiempo de cocinado')
+plt.show()
+plt.title('grafica de varias columnas Alejandra Rivera Valenzuela NC 0200')
+nombre_y_hora_prep= df_food_india[['name', 'prep_time', 'cook_time']].head(10)
+nombre_y_hora_prep.plot.bar(x='name', rot=30)
+plt.title('grafica de 2 columnas Alejandra Rivera Valenzuela NC 0200')
+plt.xlabel('nombre del platillo')
+plt.ylabel('Tiempo de cocinado prep y comida')
+plt.show()
+print("\n--- gráficos de barras apiladas (una tras otra verticalmente Alejandra Rivera Valenzuela NC 0200---")
+nombre_y_hora_prep.plot.bar(x='name', stacked=True, rot=30)
+plt.title('grafica apilada Alejandra Rivera Valenzuela NC 0200')
+plt.xlabel('nombre del platillo')
+plt.ylabel('Tiempo de cocinado prep y comida')
+plt.show()
