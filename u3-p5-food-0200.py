@@ -5,9 +5,6 @@ import matplotlib.pyplot as plt
 df_food_india = pd.read_csv('indian_food.csv')
 print("\n--- DATOS LEÍDOS DESDE CSV ,comida india 0200 ---")
 print(df_food_india)
-print("\n--- Mostrar Nombre comida + ingredientes 0200---")
-recetas = df_food_india[['name', 'ingredients']]
-print(recetas)
 print("\n--- tiempo de cocinado mostrar 10 registros con head 0200 ---")
 nombre_y_hora = df_food_india[['name', 'cook_time']].head(10)
 print(nombre_y_hora)
@@ -29,5 +26,10 @@ print("\n--- gráficos de barras apiladas (una tras otra verticalmente Alejandra
 nombre_y_hora_prep.plot.bar(x='name', stacked=True, rot=30)
 plt.title('grafica apilada Alejandra Rivera Valenzuela NC 0200')
 plt.xlabel('nombre del platillo')
-plt.ylabel('Tiempo de cocinado prep y comida')
+plt.ylabel('Tiempo ''de cocinado prep y comida')
 plt.show()
+print("Alejandra Rivera Valenzuela NC = 0200")
+
+
+
+
